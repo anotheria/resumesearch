@@ -1,5 +1,7 @@
 package com.bootcamp.profilegenerator.model;
 
+import org.apache.solr.client.solrj.beans.Field;
+
 public class Skill {
     private String name;
     private int probability;
@@ -15,6 +17,7 @@ public class Skill {
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;

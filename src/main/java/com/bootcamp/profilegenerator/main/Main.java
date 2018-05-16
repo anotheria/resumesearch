@@ -7,20 +7,48 @@ import com.bootcamp.profilegenerator.model.Backend;
 import com.bootcamp.profilegenerator.model.Frontend;
 import com.bootcamp.profilegenerator.model.Profile;
 import com.bootcamp.profilegenerator.model.Skill;
+import com.bootcamp.profilegenerator.solr.Connector;
+import com.bootcamp.profilegenerator.solr.Manipulator;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 import java.util.*;
 
 public class Main {
+    /**
+     * @param args <p>if empty app will generate 50 profiles</p>
+     *             <p>If args present it must be in format -command (generate or delete) -number (optional, if not set will generate 50 profiles.
+     *             only for -generate command.)</p>
+     */
     public static void main(String... args) {
+        System.out.println(Arrays.toString(args));
+        /**
+         * default case, no params
+         */
+        if (args.length == 0) {
+            generate(50);
+        }
+        if (args.length == 2 && args[0].equalsIgnoreCase("generate")) {
+            generate(Integer.parseInt(args[1]));
+        }
+        /**
+         * -delete (no params)
+         */
+        if (args.length == 1 && args[0].equalsIgnoreCase("delete")) {
+            Manipulator.deleteAllProfiles(Connector.connect("localhost", 8983, "index"));
+        }
+        /**
+         * -delete -host -port -coreName
+         */
+        if (args.length == 4 && args[0].equalsIgnoreCase("delete")) {
+            Manipulator.deleteAllProfiles(Connector.connect(args[0], Integer.parseInt(args[1]), args[2]));
+        }
+    }
+
+    public static void generate(int profilesNumber) {
         TypeProbabilityGenerator t = TypeProbabilityGenerator.getInstance();
         Map<Class, Integer> m = new HashMap<>();
         m.put(Backend.class, 75);
         m.put(Frontend.class, 25);
-
-        int profilesNumber = 50;
-        if (args.length > 0 && Integer.parseInt(args[0]) > 0) {
-            profilesNumber = Integer.parseInt(args[0]);
-        }
 
         List<Profile> profiles = new LinkedList<>();
         for (int i = 0; i < profilesNumber; i++) {
@@ -31,19 +59,11 @@ public class Main {
             NameGenerator n = NameGenerator.getInstance();
 
             Profile p = new Profile(n.getRandomName(), n.getRandomSurname(), sg.generateSkillSet(c));
-            System.out.println("===============");
-            System.out.println("Type : " + c);
-            System.out.println("Name : " + p.getFirstName() + " " + p.getLastName());
-            System.out.println("Skill number : " + p.getSkillSet().size());
-            System.out.println("Skills : " + p.getSkillSet());
-            System.out.println("===============");
             profiles.add(p);
         }
-
-        //Now somehow we need to store profiles on our Solr Server.
+        HttpSolrClient solr = Connector.connect("localhost", 8983, "index");
         for(Profile p : profiles){
-            //System.out.println(p.toString());
+            Manipulator.addProfile(solr, p);
         }
-
     }
 }

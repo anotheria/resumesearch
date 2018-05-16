@@ -1,5 +1,8 @@
 package com.bootcamp.profilegenerator.model;
 
+import org.apache.solr.client.solrj.beans.Field;
+
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -8,6 +11,7 @@ public class Profile<T extends Skill> {
     private String firstName;
     private String lastName;
     private Set<T> skillSet;
+    Set<String> t;
 
     public Profile(String firstName, String lastName, Set<T> skillSet) {
         this.firstName = firstName;
@@ -19,6 +23,7 @@ public class Profile<T extends Skill> {
         return firstName;
     }
 
+    //@Field("firstName")
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -27,6 +32,7 @@ public class Profile<T extends Skill> {
         return lastName;
     }
 
+    //@Field("lastName")
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -35,9 +41,11 @@ public class Profile<T extends Skill> {
         return skillSet;
     }
 
+    //@Field("Skills")
     public void setSkillSet(Set<T> skillSet) {
         this.skillSet = skillSet;
     }
+
 
     @Override
     public boolean equals(Object o) {

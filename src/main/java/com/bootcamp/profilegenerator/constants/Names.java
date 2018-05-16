@@ -9,8 +9,8 @@ public final class Names {
     }
 
     private static final String[] NAMES = new String[]{
-            "Igor", "Roman", "Eugene", "Sergei Nikolai", "Artem", "Andriy", "Anton", "Sasha", "Alex", "Alexei", "Miroslav", "Konstantin", "Leonid",
-            "Ilja", "Georgiy", "Denis", "Tatiana Michail", "Anna"
+            "Igor", "Roman", "Eugene", "Sergei", "Nikolai", "Artem", "Andriy", "Anton", "Sasha", "Alex", "Alexei", "Miroslav", "Konstantin", "Leonid",
+            "Ilja", "Georgiy", "Denis", "Tatiana", "Michail", "Anna"
     };
 
     private static final char[] SURNAMES = "abcdefghijklmnopqrstuvwxyz".toUpperCase().toCharArray();
