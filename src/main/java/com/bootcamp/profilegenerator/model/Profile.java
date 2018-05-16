@@ -58,4 +58,13 @@ public class Profile<T extends Skill> {
         result = 31 * result + skillSet.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", skillSet=" + skillSet +
+                '}';
+    }
 }

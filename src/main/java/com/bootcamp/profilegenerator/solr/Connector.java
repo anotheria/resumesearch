@@ -1,4 +1,4 @@
-package com.bootcamp.profilegenerator.solar;
+package com.bootcamp.profilegenerator.solr;
 
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.XMLResponseParser;

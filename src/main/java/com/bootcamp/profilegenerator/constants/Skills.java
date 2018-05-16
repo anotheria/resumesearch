@@ -69,13 +69,13 @@ public final class Skills {
      * @return Set of skills belongs to type passed as parameter. Null if no skills for this type present.
      */
     public static Set<? extends Skill> getSet(Class<? extends Skill> clazz) {
-        if (clazz.getClass().isInstance(Backend.class)) {
+
+        if (clazz.equals(Backend.class)) {
             return getBackendSet();
         }
-        if (clazz.getClass().isInstance(Frontend.class)) {
+        if (clazz.equals(Frontend.class)) {
             return getFrontendSet();
         }
-        System.out.println("No type " + clazz);
         return null;
     }
 }

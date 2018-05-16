@@ -2,37 +2,48 @@ package com.bootcamp.profilegenerator.main;
 
 import com.bootcamp.profilegenerator.generator.NameGenerator;
 import com.bootcamp.profilegenerator.generator.SkillSetGenerator;
+import com.bootcamp.profilegenerator.generator.TypeProbabilityGenerator;
 import com.bootcamp.profilegenerator.model.Backend;
 import com.bootcamp.profilegenerator.model.Frontend;
 import com.bootcamp.profilegenerator.model.Profile;
 import com.bootcamp.profilegenerator.model.Skill;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String... args) {
-        SkillSetGenerator<Backend> sg = SkillSetGenerator.getSkillSetGenerator();
-        sg.generateSkillSet(Backend.class);
-        NameGenerator n = NameGenerator.getInstance();
-        System.exit(0);
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Name: " + n.getRandomName() + " " + n.getRandomSurname());
+        TypeProbabilityGenerator t = TypeProbabilityGenerator.getInstance();
+        Map<Class, Integer> m = new HashMap<>();
+        m.put(Backend.class, 75);
+        m.put(Frontend.class, 25);
+
+        int profilesNumber = 50;
+        if (args.length > 0 && Integer.parseInt(args[0]) > 0) {
+            profilesNumber = Integer.parseInt(args[0]);
         }
 
-        Set<Backend> l1 = new HashSet<>();
-        Set<Frontend> l2 = new HashSet<>();
+        List<Profile> profiles = new LinkedList<>();
+        for (int i = 0; i < profilesNumber; i++) {
 
+            Class c = t.getRandomClass(m);
 
-        Backend b = new Backend("Backend", 100);
-        Frontend f = new Frontend("Frontend", 100);
+            SkillSetGenerator<Skill> sg = SkillSetGenerator.getSkillSetGenerator();
+            NameGenerator n = NameGenerator.getInstance();
 
-        l1.add(b);
-        l2.add(f);
+            Profile p = new Profile(n.getRandomName(), n.getRandomSurname(), sg.generateSkillSet(c));
+            System.out.println("===============");
+            System.out.println("Type : " + c);
+            System.out.println("Name : " + p.getFirstName() + " " + p.getLastName());
+            System.out.println("Skill number : " + p.getSkillSet().size());
+            System.out.println("Skills : " + p.getSkillSet());
+            System.out.println("===============");
+            profiles.add(p);
+        }
 
-        Profile<Backend> p = new Profile<>("Name", "Lastname", l1);
+        //Now somehow we need to store profiles on our Solr Server.
+        for(Profile p : profiles){
+            //System.out.println(p.toString());
+        }
 
     }
 }
