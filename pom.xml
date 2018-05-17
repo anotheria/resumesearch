@@ -6,6 +6,7 @@
 
     <groupId>com.bootcamp.profilegenerator</groupId>
     <artifactId>ProfileGenerator</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,13 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>constants</module>
+        <module>Generator</module>
+        <module>Main</module>
+        <module>Model</module>
+        <module>Solr</module>
+    </modules>
 
     <dependencies>
         <dependency>
