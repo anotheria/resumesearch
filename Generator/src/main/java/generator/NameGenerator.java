@@ -1,6 +1,6 @@
 package generator;
 
-import com.bootcamp.profilegenerator.constants.Names;
+import constants.Names;
 
 import java.util.Random;
 

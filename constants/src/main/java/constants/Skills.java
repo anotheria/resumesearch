@@ -1,8 +1,8 @@
 package constants;
 
-import com.bootcamp.profilegenerator.model.Backend;
-import com.bootcamp.profilegenerator.model.Frontend;
-import com.bootcamp.profilegenerator.model.Skill;
+import model.Backend;
+import model.Frontend;
+import model.Skill;
 
 import java.util.HashSet;
 import java.util.Set;

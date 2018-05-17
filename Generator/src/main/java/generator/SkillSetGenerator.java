@@ -1,9 +1,9 @@
 package generator;
 
-import com.bootcamp.profilegenerator.model.Backend;
-import com.bootcamp.profilegenerator.model.Frontend;
-import com.bootcamp.profilegenerator.model.Skill;
 import constants.Skills;
+import model.Backend;
+import model.Frontend;
+import model.Skill;
 
 import java.util.*;
 

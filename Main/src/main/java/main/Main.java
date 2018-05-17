@@ -1,15 +1,15 @@
 package main;
 
-import com.bootcamp.profilegenerator.generator.NameGenerator;
-import com.bootcamp.profilegenerator.generator.SkillSetGenerator;
-import com.bootcamp.profilegenerator.generator.TypeProbabilityGenerator;
-import com.bootcamp.profilegenerator.model.Backend;
-import com.bootcamp.profilegenerator.model.Frontend;
-import com.bootcamp.profilegenerator.model.Profile;
-import com.bootcamp.profilegenerator.model.Skill;
-import com.bootcamp.profilegenerator.solr.Connector;
-import com.bootcamp.profilegenerator.solr.Manipulator;
+import generator.NameGenerator;
+import generator.SkillSetGenerator;
+import generator.TypeProbabilityGenerator;
+import model.Backend;
+import model.Frontend;
+import model.Profile;
+import model.Skill;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
+import solr.Connector;
+import solr.Manipulator;
 
 import java.util.*;
 
