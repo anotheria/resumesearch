@@ -1,12 +1,14 @@
 package main;
 
+
+
 import generator.NameGenerator;
 import generator.SkillSetGenerator;
 import generator.TypeProbabilityGenerator;
-import model.Backend;
-import model.Frontend;
-import model.Profile;
-import model.Skill;
+import generator.model.Backend;
+import generator.model.Frontend;
+import generator.model.Profile;
+import generator.model.Skill;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import solr.Connector;
 import solr.Manipulator;

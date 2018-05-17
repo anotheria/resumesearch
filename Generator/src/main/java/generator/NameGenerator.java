@@ -1,6 +1,6 @@
 package generator;
 
-import constants.Names;
+import generator.constants.Names;
 
 import java.util.Random;
 

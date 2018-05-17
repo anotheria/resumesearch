@@ -1,4 +1,4 @@
-package model;
+package generator.model;
 
 public final class Backend extends Skill{
 

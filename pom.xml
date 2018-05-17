@@ -21,7 +21,7 @@
         </plugins>
     </build>
     <modules>
-        <module>constants</module>
+        <module>generator.constants</module>
         <module>Generator</module>
         <module>Main</module>
         <module>Model</module>

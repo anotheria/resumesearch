@@ -13,13 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>com.bootcamp.profilegenerator</groupId>
-            <artifactId>Model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.bootcamp.profilegenerator</groupId>
-            <artifactId>constants</artifactId>
+            <artifactId>Generator</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

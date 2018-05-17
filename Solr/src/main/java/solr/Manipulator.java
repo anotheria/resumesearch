@@ -1,7 +1,7 @@
 package solr;
 
-import model.Profile;
-import model.Skill;
+import generator.model.Profile;
+import generator.model.Skill;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.common.SolrInputDocument;

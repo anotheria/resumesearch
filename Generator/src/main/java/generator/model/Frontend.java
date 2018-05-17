@@ -1,4 +1,4 @@
-package model;
+package generator.model;
 
 public final class Frontend extends Skill {
 

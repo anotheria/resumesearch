@@ -1,8 +1,8 @@
-package constants;
+package generator.constants;
 
-import model.Backend;
-import model.Frontend;
-import model.Skill;
+import generator.model.Backend;
+import generator.model.Frontend;
+import generator.model.Skill;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package model;
+package generator.model;
 
 public class Skill {
     private String name;

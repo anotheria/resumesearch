@@ -1,4 +1,4 @@
-package constants;
+package generator.constants;
 
 /**
  * This class represents list of possible names and surnames.

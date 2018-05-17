@@ -1,4 +1,4 @@
-package model;
+package generator.model;
 
 import java.util.Set;
 

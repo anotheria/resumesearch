@@ -1,9 +1,9 @@
 package generator;
 
-import constants.Skills;
-import model.Backend;
-import model.Frontend;
-import model.Skill;
+import generator.constants.Skills;
+import generator.model.Backend;
+import generator.model.Frontend;
+import generator.model.Skill;
 
 import java.util.*;
 
