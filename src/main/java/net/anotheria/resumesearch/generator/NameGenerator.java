@@ -1,6 +1,10 @@
 package net.anotheria.resumesearch.generator;
 
 
+import net.anotheria.resumesearch.constants.Names;
+
+import java.util.Random;
+
 /**
  * Class for generation Name or Surname.
  */

@@ -1,7 +1,6 @@
 package net.anotheria.resumesearch.main;
 
 
-
 import net.anotheria.resumesearch.generator.NameGenerator;
 import net.anotheria.resumesearch.generator.SkillSetGenerator;
 import net.anotheria.resumesearch.generator.TypeProbabilityGenerator;
@@ -9,9 +8,9 @@ import net.anotheria.resumesearch.model.Backend;
 import net.anotheria.resumesearch.model.Frontend;
 import net.anotheria.resumesearch.model.Profile;
 import net.anotheria.resumesearch.model.Skill;
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import net.anotheria.resumesearch.solr.Connector;
 import net.anotheria.resumesearch.solr.Manipulator;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 import java.util.*;
 

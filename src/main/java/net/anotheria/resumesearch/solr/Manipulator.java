@@ -1,5 +1,6 @@
 package net.anotheria.resumesearch.solr;
 
+
 import net.anotheria.resumesearch.model.Profile;
 import net.anotheria.resumesearch.model.Skill;
 import org.apache.solr.client.solrj.SolrServerException;

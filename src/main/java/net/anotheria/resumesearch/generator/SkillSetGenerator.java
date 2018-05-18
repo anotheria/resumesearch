@@ -1,6 +1,11 @@
 package net.anotheria.resumesearch.generator;
 
 
+import net.anotheria.resumesearch.constants.Skills;
+import net.anotheria.resumesearch.model.Backend;
+import net.anotheria.resumesearch.model.Frontend;
+import net.anotheria.resumesearch.model.Skill;
+
 import java.util.*;
 
 public final class SkillSetGenerator<T extends Skill> {
