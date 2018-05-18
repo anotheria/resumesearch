@@ -1,9 +1,5 @@
-package net.anotheria.resumesearch.constants;
+package net.anotheria.resumesearch.generator;
 
-
-import net.anotheria.resumesearch.model.Backend;
-import net.anotheria.resumesearch.model.Frontend;
-import net.anotheria.resumesearch.model.Skill;
 
 import java.util.HashSet;
 import java.util.Set;

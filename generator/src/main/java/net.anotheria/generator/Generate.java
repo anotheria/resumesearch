@@ -1,4 +1,4 @@
-package net.anotheria.resumesearch.main;
+package net.anotheria.resumesearch.generator;
 
 public class Generate {
 

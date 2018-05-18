@@ -4,6 +4,9 @@ package net.anotheria.resumesearch.solr;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.XMLResponseParser;
 
+/**
+ * How to optimise connect method?
+ */
 public final class Connector {
     private static HttpSolrClient solr;
 
@@ -17,6 +20,7 @@ public final class Connector {
             solr = new HttpSolrClient.Builder(urlString).build();
             solr.setParser(new XMLResponseParser());
         }
+
         return solr;
     }
 }

@@ -1,4 +1,4 @@
-package net.anotheria.resumesearch.constants;
+package net.anotheria.resumesearch.generator;
 
 
 /**

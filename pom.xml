@@ -6,6 +6,7 @@
 
     <groupId>net.anotheria.resumesearch</groupId>
     <artifactId>ResumeSearch</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,11 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>ui</module>
+        <module>generator</module>
+        <module>solr</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.apache.solr</groupId>

@@ -1,4 +1,4 @@
-package net.anotheria.resumesearch.model;
+package net.anotheria.resumesearch.generator;
 
 public final class Backend extends Skill{
 

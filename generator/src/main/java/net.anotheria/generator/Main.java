@@ -1,13 +1,6 @@
-package net.anotheria.resumesearch.main;
+package net.anotheria.resumesearch.generator;
 
 
-import net.anotheria.resumesearch.generator.NameGenerator;
-import net.anotheria.resumesearch.generator.SkillSetGenerator;
-import net.anotheria.resumesearch.generator.TypeProbabilityGenerator;
-import net.anotheria.resumesearch.model.Backend;
-import net.anotheria.resumesearch.model.Frontend;
-import net.anotheria.resumesearch.model.Profile;
-import net.anotheria.resumesearch.model.Skill;
 import net.anotheria.resumesearch.solr.Connector;
 import net.anotheria.resumesearch.solr.Manipulator;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
@@ -28,6 +21,10 @@ public class Main {
         if (args.length == 0) {
             generate(50);
         }
+        /**
+         * -generate -n
+         * <p>Where -n is the number of profiles to generate</p>
+         */
         if (args.length == 2 && args[0].equalsIgnoreCase("generate")) {
             generate(Integer.parseInt(args[1]));
         }

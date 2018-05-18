@@ -1,11 +1,6 @@
 package net.anotheria.resumesearch.generator;
 
 
-import net.anotheria.resumesearch.constants.Skills;
-import net.anotheria.resumesearch.model.Backend;
-import net.anotheria.resumesearch.model.Frontend;
-import net.anotheria.resumesearch.model.Skill;
-
 import java.util.*;
 
 public final class SkillSetGenerator<T extends Skill> {
@@ -79,7 +74,7 @@ public final class SkillSetGenerator<T extends Skill> {
         T toRemove = skills.get(skillSetProbability[rand]);
         int toRemoveIndex = skillSetProbability[rand];
         int[] newProb = new int[skillSetProbability.length - toRemove.getProbability()];
-        //System.out.println("Delete - " + toRemoveIndex + " N= " + toRemove.getProbability());
+        //System.out.println("GeneratorDelete - " + toRemoveIndex + " N= " + toRemove.getProbability());
         //System.out.println(Arrays.toString(skillSetProbability) + " L: " + skillSetProbability.length);
         int index = 0;
         for (int i : skillSetProbability) {
