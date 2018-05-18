@@ -1,13 +1,14 @@
 package net.anotheria.resumesearch.generator;
 
 
+
 import net.anotheria.resumesearch.solr.Connector;
 import net.anotheria.resumesearch.solr.Manipulator;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 import java.util.*;
 
-public class Main {
+public class Generator {
     /**
      * @param args <p>if empty app will generate 50 profiles</p>
      *             <p>If args present it must be in format -command (generate or delete) -number (optional, if not set will generate 50 profiles.

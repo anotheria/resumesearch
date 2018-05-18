@@ -7,6 +7,6 @@ public class Generate {
         if(args.length != 0 && Integer.parseInt(args[0]) > 0){
             n = Integer.parseInt(args[0]);
         }
-        Main.generate(n);
+        Generator.generate(n);
     }
 }
