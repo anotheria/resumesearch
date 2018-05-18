@@ -1,0 +1,15 @@
+<div>
+  <input type="text" [(ngModel)]="toSearch" (keyup.,)="call(toSearch)" (keyup.enter)="call(toSearch)" (keyup.space)="call(toSearch)">
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Skills</th>
+    </tr>
+    <tr *ngFor="let profile of profiles">
+      <td>{{profile.name}}</td>
+      <td>{{profile.skills}}</td>
+    </tr>
+  </table>
+</div>
