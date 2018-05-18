@@ -1,9 +1,5 @@
-package generator;
+package net.anotheria.resumesearch.generator;
 
-import generator.constants.Skills;
-import generator.model.Backend;
-import generator.model.Frontend;
-import generator.model.Skill;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package generator.model;
+package net.anotheria.resumesearch.model;
 
 public final class Frontend extends Skill {
 

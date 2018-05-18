@@ -1,4 +1,5 @@
-package generator.constants;
+package net.anotheria.resumesearch.constants;
+
 
 /**
  * This class represents list of possible names and surnames.

@@ -1,4 +1,5 @@
-package generator.model;
+package net.anotheria.resumesearch.model;
+
 
 public class Skill {
     private String name;

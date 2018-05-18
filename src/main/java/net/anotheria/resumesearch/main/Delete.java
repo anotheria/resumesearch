@@ -1,7 +1,7 @@
-package main;
+package net.anotheria.resumesearch.main;
 
-import solr.Connector;
-import solr.Manipulator;
+import net.anotheria.resumesearch.solr.Connector;
+import net.anotheria.resumesearch.solr.Manipulator;
 
 public class Delete {
     public static void main(String[] args){

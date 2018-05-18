@@ -1,4 +1,4 @@
-package generator;
+package net.anotheria.resumesearch.generator;
 
 import java.util.Map;
 import java.util.Random;

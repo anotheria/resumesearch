@@ -1,8 +1,9 @@
-package generator.constants;
+package net.anotheria.resumesearch.constants;
 
-import generator.model.Backend;
-import generator.model.Frontend;
-import generator.model.Skill;
+
+import net.anotheria.resumesearch.model.Backend;
+import net.anotheria.resumesearch.model.Frontend;
+import net.anotheria.resumesearch.model.Skill;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +24,7 @@ public final class Skills {
         backendSet.add(new Backend("Maven", 7));
         backendSet.add(new Backend("Tomcat", 6));
         backendSet.add(new Backend("Elastic Search", 2));
-        backendSet.add(new Backend("solr", 2));
+        backendSet.add(new Backend("net.anotheria.resumesearch.solr", 2));
         backendSet.add(new Backend("ant", 1));
         backendSet.add(new Backend("PHP", 8));
         backendSet.add(new Backend("HTML/CSS", 3));

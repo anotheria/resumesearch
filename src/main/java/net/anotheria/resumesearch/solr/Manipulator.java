@@ -1,7 +1,7 @@
-package solr;
+package net.anotheria.resumesearch.solr;
 
-import generator.model.Profile;
-import generator.model.Skill;
+import net.anotheria.resumesearch.model.Profile;
+import net.anotheria.resumesearch.model.Skill;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.common.SolrInputDocument;

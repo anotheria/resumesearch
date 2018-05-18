@@ -1,4 +1,4 @@
-package generator.model;
+package net.anotheria.resumesearch.model;
 
 import java.util.Set;
 
