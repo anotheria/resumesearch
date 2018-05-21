@@ -3,6 +3,10 @@ package net.anotheria.resumesearch.generator;
 
 import java.util.*;
 
+/**
+ *
+ * @param <T> type of skill set
+ */
 public final class SkillSetGenerator<T extends Skill> {
 
     private static SkillSetGenerator skillSetGenerator;
@@ -17,6 +21,10 @@ public final class SkillSetGenerator<T extends Skill> {
         r = new Random();
     }
 
+    /**
+     *
+     * @return SkillSetGenerator instance
+     */
     public static SkillSetGenerator getSkillSetGenerator() {
         if (skillSetGenerator == null) {
             skillSetGenerator = new SkillSetGenerator();

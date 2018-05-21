@@ -8,6 +8,9 @@ import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 import java.util.*;
 
+/**
+ *
+ */
 public class Generator {
     /**
      * @param args <p>if empty app will generate 50 profiles</p>
@@ -43,6 +46,10 @@ public class Generator {
         }
     }
 
+    /**
+     * Generate profiles and index it on solr server.
+     * @param profilesNumber that is the number of profiles to generate
+     */
     public static void generate(int profilesNumber) {
         TypeProbabilityGenerator t = TypeProbabilityGenerator.getInstance();
         Map<Class, Integer> m = new HashMap<>();

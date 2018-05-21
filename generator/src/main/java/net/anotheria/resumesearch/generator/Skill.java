@@ -1,6 +1,8 @@
 package net.anotheria.resumesearch.generator;
 
-
+/**
+ * Skill entity
+ */
 public class Skill {
     private String name;
     private int probability;
@@ -8,6 +10,11 @@ public class Skill {
     protected Skill() {
     }
 
+    /**
+     *
+     * @param name that is skill name
+     * @param probability defines probability for current skill to be chosen by generator
+     */
     protected Skill(String name, int probability) {
         this.name = name;
         this.probability = probability;

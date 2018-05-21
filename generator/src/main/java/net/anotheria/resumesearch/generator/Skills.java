@@ -20,7 +20,7 @@ public final class Skills {
         backendSet.add(new Backend("Maven", 7));
         backendSet.add(new Backend("Tomcat", 6));
         backendSet.add(new Backend("Elastic Search", 2));
-        backendSet.add(new Backend("net.anotheria.resumesearch.solr", 2));
+        backendSet.add(new Backend("solr", 2));
         backendSet.add(new Backend("ant", 1));
         backendSet.add(new Backend("PHP", 8));
         backendSet.add(new Backend("HTML/CSS", 3));

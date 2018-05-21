@@ -2,13 +2,22 @@ package net.anotheria.resumesearch.generator;
 
 import java.util.Set;
 
+/**
+ * Profile entity
+ * @param <T> defines type of Skill Set for profile.
+ */
 public class Profile<T extends Skill> {
 
     private String firstName;
     private String lastName;
     private Set<T> skillSet;
-    Set<String> t;
 
+    /**
+     *
+     * @param firstName first name
+     * @param lastName last name
+     * @param skillSet that is Set of skills
+     */
     public Profile(String firstName, String lastName, Set<T> skillSet) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,7 +28,6 @@ public class Profile<T extends Skill> {
         return firstName;
     }
 
-    //@Field("firstName")
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -28,7 +36,6 @@ public class Profile<T extends Skill> {
         return lastName;
     }
 
-    //@Field("lastName")
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -37,7 +44,6 @@ public class Profile<T extends Skill> {
         return skillSet;
     }
 
-    //@Field("Skills")
     public void setSkillSet(Set<T> skillSet) {
         this.skillSet = skillSet;
     }

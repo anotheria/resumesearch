@@ -4,7 +4,7 @@ package net.anotheria.resumesearch.generator;
 import java.util.Random;
 
 /**
- * Class for generation Name or Surname.
+ * Class for generating Names or Surnames.
  */
 public final class NameGenerator {
 
