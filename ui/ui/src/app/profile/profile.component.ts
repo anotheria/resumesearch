@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
 
   toSearch: string;
   profiles: Profile[];
+  total : number;
 
   constructor(private http: HttpClient) {
   }
@@ -36,6 +37,7 @@ export class ProfileComponent implements OnInit {
        // console.log(p);
         this.profiles.push(p);
       }
+      this.total = data['response'].numFound;
     });
 
   }
