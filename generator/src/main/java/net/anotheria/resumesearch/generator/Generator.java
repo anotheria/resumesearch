@@ -9,14 +9,10 @@ import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import java.util.*;
 
 /**
- *
+ * Generate with arguments
  */
 public class Generator {
-    /**
-     * @param args <p>if empty app will generate 50 profiles</p>
-     *             <p>If args present it must be in format -command (generate or delete) -number (optional, if not set will generate 50 profiles.
-     *             only for -generate command.)</p>
-     */
+
     public static void main(String... args) {
         System.out.println(Arrays.toString(args));
         /**
@@ -37,12 +33,6 @@ public class Generator {
          */
         if (args.length == 1 && args[0].equalsIgnoreCase("delete")) {
             Manipulator.deleteAllProfiles(Connector.connect("localhost", 8983, "index"));
-        }
-        /**
-         * -delete -host -port -coreName
-         */
-        if (args.length == 4 && args[0].equalsIgnoreCase("delete")) {
-            Manipulator.deleteAllProfiles(Connector.connect(args[0], Integer.parseInt(args[1]), args[2]));
         }
     }
 
