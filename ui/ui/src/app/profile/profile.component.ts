@@ -71,7 +71,8 @@ export class ProfileComponent implements OnInit {
       if (k) {
         query += " AND ";
       }
-      query += "*" + word + "*";
+      // *param* ?
+      query += "" + word + "";
       k = true;
     }
     query += ")";
