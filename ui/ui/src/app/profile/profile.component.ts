@@ -21,6 +21,7 @@ export class ProfileComponent implements OnInit {
 
   call(toSearch: string): void {
     if(toSearch) {
+      console.log("request...");
       let a = this.prepareWordsArray(toSearch);
       let query = this.buildLink(a);
       let url = "http://localhost:8983/solr/index/select?q=" + query + "&rows=3";
