@@ -20,25 +20,27 @@ export class ProfileComponent implements OnInit {
   }
 
   call(toSearch: string): void {
-    let a = this.prepareWordsArray(toSearch);
-    let query = this.buildLink(a);
-    let url = "http://localhost:8983/solr/index/select?q=" + query + "&rows=3";
-    //console.log(url);
-    this.http.get(url).subscribe(data => {
+    if(toSearch) {
+      let a = this.prepareWordsArray(toSearch);
+      let query = this.buildLink(a);
+      let url = "http://localhost:8983/solr/index/select?q=" + query + "&rows=3";
+      //console.log(url);
+      this.http.get(url).subscribe(data => {
 
-      let d = data['response'].docs;
-      //console.log(data['response'].docs);
-      this.profiles = new Array();
-      for (let o of d) {
-        //console.log(o.firstName[0])
-        let p = new Profile();
-        p.name = o.firstName[0] + " " + o.lastName[0];
-        p.skills = o.skills;
-       // console.log(p);
-        this.profiles.push(p);
-      }
-      this.total = data['response'].numFound;
-    });
+        let d = data['response'].docs;
+        //console.log(data['response'].docs);
+        this.profiles = new Array();
+        for (let o of d) {
+          //console.log(o.firstName[0])
+          let p = new Profile();
+          p.name = o.firstName[0] + " " + o.lastName[0];
+          p.skills = o.skills;
+          // console.log(p);
+          this.profiles.push(p);
+        }
+        this.total = data['response'].numFound;
+      });
+    }
 
   }
 
